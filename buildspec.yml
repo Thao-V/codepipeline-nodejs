@@ -2,14 +2,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 10
-  pre_build:
-    commands:
-      - npm cache clean --force  # Optional: Clear npm cache
-      - npm i
-  build:
-    commands:
-      - npm run build
+      nodejs: 16
 artifacts:
   files:
     - start-service.sh
@@ -18,4 +11,3 @@ artifacts:
     - package.json
     - package-lock.json
     - appspec.yml
-    - 'node_modules/**/*'
