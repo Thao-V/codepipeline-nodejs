@@ -1,8 +1,13 @@
 version: 0.0
 os: linux
 files:
-  # unzip the build artifact in ~/app
-  - source: /
+  - source: src/server.js
+    destination: /home/ec2-user/app/release/src
+  - source: scripts/
+    destination: /home/ec2-user/app/release/scripts
+  - source: package.json
+    destination: /home/ec2-user/app/release
+  - source: package-lock.json
     destination: /home/ec2-user/app/release
 permissions:
   # change permissions from root to ec2-user

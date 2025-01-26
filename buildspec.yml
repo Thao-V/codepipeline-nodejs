@@ -5,10 +5,10 @@ phases:
       nodejs: 16
 artifacts:
   files:
-    - start-service.sh
-    - install-dependencies.sh
-    - stop-service.sh
-    - server.js
+    - scripts/start-service.sh
+    - scripts/install-dependencies.sh
+    - scripts/stop-service.sh
+    - src/server.js
     - package.json
     - package-lock.json
     - appspec.yml
