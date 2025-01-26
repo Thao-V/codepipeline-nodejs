@@ -1,4 +1,5 @@
 #!/bin/bash
+export PATH=$PATH:/usr/local/bin
 source /home/ec2-user/.bash_profile
 echo "Debugging deployment environment..." > /home/ec2-user/deploy-debug.log
 echo "User: $(whoami)" >> /home/ec2-user/deploy-debug.log
