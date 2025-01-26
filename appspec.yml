@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: src/server.js
+  - source: src/
     destination: /home/ec2-user/app/release/src
   - source: scripts/
     destination: /home/ec2-user/app/release/scripts
