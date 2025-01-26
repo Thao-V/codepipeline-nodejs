@@ -6,6 +6,7 @@ phases:
 artifacts:
   files:
     - start-service.sh
+    - install-dependencies.sh
     - stop-service.sh
     - server.js
     - package.json

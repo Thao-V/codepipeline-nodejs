@@ -11,13 +11,15 @@ permissions:
     owner: ec2-user
     group: ec2-user
 hooks:
-  ApplicationStart:
-    # start the application
-    - location: start-service.sh
+  ApplicationStop:
+    - location: stop-service.sh
       timeout: 300
       runas: ec2-user
-  ApplicationStop:
-    # stop the application
-    - location: stop-service.sh
+  AfterInstall:
+    - location: install-dependencies.sh
+      timeout: 300
+      runas: ec2-user
+  ApplicationStart:
+    - location: start-service.sh
       timeout: 300
       runas: ec2-user
