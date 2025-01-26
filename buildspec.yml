@@ -5,21 +5,21 @@ phases:
     runtime-versions:
       nodejs: 16 # Specify Node.js version
     commands:
-      - echo Installing Node.js dependencies...
+      - echo "Installing Node.js dependencies..."
       - npm install -g pm2
   pre_build:
     commands:
-      - echo Pre-build phase: Installing app dependencies...
+      - echo "Pre-build phase: Installing app dependencies..."
       - npm install
   build:
     commands:
-      - echo Building the application...
+      - echo "Building the application..."
       - npm run build
   post_build:
     commands:
-      - echo Zipping application for deployment...
+      - echo "Zipping application for deployment..."
       - zip -r app.zip .
-      - echo Build complete!
+      - echo "Build complete!"
 artifacts:
   files:
     - app.zip
