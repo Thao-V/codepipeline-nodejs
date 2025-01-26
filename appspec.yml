@@ -17,14 +17,14 @@ permissions:
     group: ec2-user
 hooks:
   ApplicationStop:
-    - location: stop-service.sh
+    - location: scripts/stop-service.sh
       timeout: 300
       runas: ec2-user
   AfterInstall:
-    - location: install-dependencies.sh
+    - location: scripts/install-dependencies.sh
       timeout: 300
       runas: root
   ApplicationStart:
-    - location: start-service.sh
+    - location: scripts/start-service.sh
       timeout: 300
       runas: ec2-user
