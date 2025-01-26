@@ -9,7 +9,7 @@ phases:
       - npm install -g pm2
   pre_build:
     commands:
-      - echo "Pre-build phase: Installing app dependencies..."
+      - echo "Pre-build phase Installing app dependencies..."
       - npm install
   build:
     commands:
